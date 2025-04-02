@@ -42,7 +42,7 @@ const CASE_STUDY_DATA = {
         title: "Client Satisfaction",
         result: '20%',
         side: 'up',
-        description: "With automated workflows and streamlined communication processes, we were able to improve client satisfaction by 20%. This increase is due to faster response times, better issue resolution, and personalized services that meet our clients' needs more effectively."
+        description: "With automated workflows and streamlined communication processes, we were able to improve client satisfaction by 20%."
       },
       {
         title: "Bug",

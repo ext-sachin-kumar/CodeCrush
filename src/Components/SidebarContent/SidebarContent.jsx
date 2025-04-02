@@ -1,8 +1,8 @@
-import { Home, FileText, ContactRound } from "lucide-react";
+import { Home } from "lucide-react";
 import { useContext } from 'react';
 import SachinImage from '../../assets/IMG_1931-modified.png';
 import { FaGithub, FaLinkedin, FaStackOverflow, FaPaperPlane, FaPhone, FaFileCode, FaBlog } from "react-icons/fa";
-import { MdAlternateEmail, MdOutlineMedicalServices } from 'react-icons/md';
+import { MdAlternateEmail, MdDesignServices } from 'react-icons/md';
 import useTypingEffect from '../hooks/useTypingEffact';
 import { RoutingContext } from "../Context/Routing-context";
 import HireMe from "../Buttons/HireMe";
@@ -53,8 +53,8 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
         <nav className="mt-6 w-full">
           <NavItem icon={<Home className="w-5 h-5" />} label="About me" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "About me"} />
           <NavItem icon={<FaFileCode className="w-5 h-5"/>} label="Portfolio" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Portfolio"} />
-          {/* <NavItem icon={<MdOutlineMedicalServices className="w-5 h-5"/>} label="Services & Pricing" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Services & Pricing"} />
-          <NavItem icon={<FileText className="w-5 h-5"/>} label="Resume" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Resume"} />
+          <NavItem icon={<MdDesignServices className="w-5 h-5"/>} label="Services" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Services"} />
+          {/*<NavItem icon={<FileText className="w-5 h-5"/>} label="Resume" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Resume"} />
           <NavItem icon={<FaBlog className="w-5 h-5 ml-1"/>} label="Blog" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Blog"} />
           <NavItem icon={<ContactRound className="w-5 h-5"/>} label="Contact" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Contact"} /> */}
         </nav>
@@ -69,7 +69,7 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
 const NavItem = ({ icon, label, isActive, onClickRoutes, closeSideBarModal }) => (
   <button
     onClick={() => {onClickRoutes(label); closeSideBarModal()}}
-    className={`flex items-center text-md w-full px-6 py-3 text-left transition-all duration-200 rounded-md ${isActive ? 'text-accent' : 'hover:bg-[rgb(var(--color-primary))] hover:text-primary'}`}
+    className={`flex items-center text-md w-full px-6 cursor-pointer py-3 text-left transition-all duration-200 rounded-md ${isActive ? 'text-accent' : 'hover:bg-[rgb(var(--color-primary))] hover:text-primary'}`}
   >
     {icon}
     <span className="ml-3">{label}</span>

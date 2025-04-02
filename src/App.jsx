@@ -5,6 +5,7 @@ import Home from './Components/Home/Home'
 import RoutingContextProvider, { RoutingContext } from './Components/Context/Routing-context';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Project from './Components/Project/Project';
+import Services from './Components/Services/Services';
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth <= 800);
@@ -40,6 +41,7 @@ function Content({ isSmallScreen }) {
       {activeLink === 'About me' && <Home isSmallScreen={isSmallScreen} />}
       {activeLink === 'Portfolio' && <Portfolio isSmallScreen={isSmallScreen} />}
       {activeLink.includes('Case study') && <Project isSmallScreen={isSmallScreen} project={project} />}
+      {activeLink === 'Services' && <Services isSmallScreen={isSmallScreen} />}
     </>
   );
 }

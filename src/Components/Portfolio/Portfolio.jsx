@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
 import HeyjobsImage from '../../assets/heyjobs.png';
+import { motion } from "framer-motion";
 import NOZLImage from '../../assets/NOZL.jpeg'
 import TrustSignalImage from '../../assets/Trustsignal.jpeg'
 import LucentaSolutionsImage from '../../assets/lucentasolutions.png'
 import { FaEye } from "react-icons/fa";
 import { RoutingContext } from "../Context/Routing-context";
+import MotionDiv from "../Motion/MotionDiv";
 
 const PROJECTS = [
   { date: "April 2023 - Feb 2025", title: "HeyJobs", image: HeyjobsImage, description: "HeyJobs is a recruitment platform that helps companies find and hire the best talent quickly and efficiently. By simplifying the hiring process, HeyJobs makes it easier for employers to attract and engage candidates while enhancing the overall candidate experience. With seamless integrations into existing systems, HeyJobs offers a user-friendly solution for businesses of all sizes to streamline their hiring workflows." },
@@ -36,9 +38,12 @@ export default function Portfolio({ isSmallScreen }) {
 
         <div className="border-b border-gray-800 mb-10"></div>
 
-        <div className={`mb-10 grid ${isSmallScreen ? "grid-cols-1 gap-6" : "grid-cols-3 gap-10"}`}>
+        <div className={`mb-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6`}>
           {
             filteredProjects.map((ele, index) => (
+              <MotionDiv
+              index={index}
+            >
               <Card key={index}
                 onClickRoutes={onClickRoutes}
                 isSmallScreen={isSmallScreen}
@@ -48,6 +53,7 @@ export default function Portfolio({ isSmallScreen }) {
                 image={ele.image}
                 date={ele.date}
               />
+              </MotionDiv>
             ))
           }
         </div>
@@ -62,7 +68,7 @@ const Card = ({ image, title, description, onClickRoutes, date, isSmallScreen })
 
   return (
     <div
-      className="mt-2 bg-[rgb(var(--color-secondary))] overflow-hidden relative rounded-lg"
+      className="mt-2 h-full bg-[rgb(var(--color-secondary))] overflow-hidden relative rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -92,7 +92,7 @@ const Project = ({ isSmallScreen, project }) => {
 
         <div className="mb-10">
           <h3 className="mb-5 text-heading text-2xl">Results</h3>
-          <div className={`grid ${isSmallScreen ? "grid-cols-1 gap-6" : "grid-cols-4 gap-4"}`}>
+          <div className={`grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6`}>
             {
               results.map((ele, index) => (
                 <Card key={index} title={ele.title} result={ele.result} side={ele.side} description={ele.description} />

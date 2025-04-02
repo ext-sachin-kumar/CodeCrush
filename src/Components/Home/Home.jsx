@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import RecommendationList from "../Recommendations/Recommendations";
+import MotionDiv from "../Motion/MotionDiv";
 
 const skills = [
   { name: "Node.js", level: 95 },
@@ -7,7 +8,7 @@ const skills = [
   { name: "ReactJS", level: 85 },
   { name: "Python", level: 80 },
   { name: "MongoDB", level: 86 },
-  { name: "Ruby on Rails", level: 70 },
+  { name: "Ruby on Rails", level: 85 },
   { name: "PostgreSQL", level: 75 },
   { name: "HTML & CSS", level: 95 },
 ];
@@ -32,17 +33,13 @@ const Home = ({ isSmallScreen }) => {
         {/* Skills Section */}
         <div className="mb-10">
           <h1 className="text-2xl font-bold text-heading border-l-6 border-blue-400 pl-4">Skills</h1>
-          <ul className={`mt-5 grid ${isSmallScreen ? 'grid-cols-2 gap-6' : 'grid-cols-4 gap-4'}`}>
+          <ul className={`mt-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6`}>
             {skills.map((skill, index) => (
               <li key={index} className="mb-2">
                 <p className="font-semibold mb-2 text-primary">{skill.name}</p>
                 <div className="w-full bg-gray-700 rounded-full h-1.5">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="bg-blue-400 h-1.5 rounded-full"
-                  ></motion.div>
+                  <MotionDiv index={index} key={index} classes={`bg-blue-400 h-1.5 rounded-full`} initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}></MotionDiv>
                 </div>
               </li>
             ))}
@@ -57,7 +54,7 @@ const Home = ({ isSmallScreen }) => {
           <RecommendationList isSmallScreen={isSmallScreen} />
         </div>
       </div>
-      { window.innerWidth <= 600 ? <div className="h-10"></div> : null }
+      {window.innerWidth <= 600 ? <div className="h-5"></div> : null}
     </div>
   );
 };

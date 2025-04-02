@@ -1,18 +1,21 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaQuoteLeft } from "react-icons/fa6";
 import RECOMMENDATIONS from "../data/recommendations";
+import MotionDiv from "../Motion/MotionDiv";
 
 const color = "blue";
 
 const RecommendationList = ({ isSmallScreen }) => {
   return (
-    <ul
-      className={`mt-5 grid ${
-        isSmallScreen ? "grid-cols-1 gap-6" : "grid-cols-4 gap-4"
-      }`}
-    >
+    <ul className={`mt-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6`}>
       {RECOMMENDATIONS.map((rec, index) => (
+          <MotionDiv
+            animate={{ opacity: 1, y: 0 }}
+            index={index}
+          >
         <RecommendationItem key={index} rec={rec} />
+        </MotionDiv>
       ))}
     </ul>
   );
@@ -28,7 +31,7 @@ const RecommendationItem = ({ rec }) => {
         border: "1px solid rgba(0,0,0,0.025)",
         zIndex: 1,
       }}
-      className="p-6 rounded-lg shadow-lg bg-[#151e29] relative"
+      className="p-6 h-full rounded-lg shadow-lg bg-[#151e29] relative"
     >
       <div
         className={`absolute top-0 left-0 w-10 h-10 bg-${color}-400`}
