@@ -6,6 +6,8 @@ import RoutingContextProvider, { RoutingContext } from './Components/Context/Rou
 import Portfolio from './Components/Portfolio/Portfolio';
 import Project from './Components/Project/Project';
 import Services from './Components/Services/Services';
+import ResumeViewer from './Components/Resume/Resume';
+import ContactForm from './Components/Contact/Contact';
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth <= 800);
@@ -42,6 +44,8 @@ function Content({ isSmallScreen }) {
       {activeLink === 'Portfolio' && <Portfolio isSmallScreen={isSmallScreen} />}
       {activeLink.includes('Case study') && <Project isSmallScreen={isSmallScreen} project={project} />}
       {activeLink === 'Services' && <Services isSmallScreen={isSmallScreen} />}
+      {activeLink === 'Resume' && <ResumeViewer isSmallScreen={isSmallScreen}/> }
+      {activeLink === 'Contact' && <ContactForm isSmallScreen={isSmallScreen}/> }
     </>
   );
 }

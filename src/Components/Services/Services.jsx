@@ -1,6 +1,9 @@
 import { FaCode, FaMobileAlt, FaCloud, FaDatabase, FaCogs, FaSalesforce } from "react-icons/fa";
 import { motion } from "framer-motion";
 import MotionDiv from "../Motion/MotionDiv";
+import { useContext } from "react";
+import { RoutingContext } from "../Context/Routing-context";
+
 
 const services = [
   { name: "Web Development", icon: <FaCode className="text-blue-400 text-4xl" />, description: "Building scalable and high-performance web applications using modern frameworks." },
@@ -12,6 +15,7 @@ const services = [
 ];
 
 const Services = ({ isSmallScreen }) => {
+  const  { onClickRoutes } = useContext(RoutingContext)
   return (
     <div className="flex-1 flex-col h-screen overflow-y-auto bg-[rgb(var(--color-primary))]">
       <div className={`flex-1 ${isSmallScreen ? 'pt-20' : 'pt-8'} p-10`}>
@@ -20,7 +24,7 @@ const Services = ({ isSmallScreen }) => {
           <h1 className="text-2xl text-heading">Services</h1>
           <p className="mt-5 text-primary">
             I have 7+ years of development experience building software for the web and mobile devices.
-            Check out my <span className="text-accent underline cursor-pointer" onClick={() => { onClickRoutes('Portfolio') }} >Portfolio</span> and <a href="https://linkedin.com/in/sachin-codecrush" className="text-accent underline"> Linkedin </a>
+            Check out my <span className="text-accent underline cursor-pointer" onClick={() => { onClickRoutes('Portfolio') }} >Portfolio</span> and <a target="_blank" href="https://linkedin.com/in/sachin-codecrush" className="text-accent underline"> Linkedin </a>
             to learn more about my work and experiences.
           </p>
           <p className="mt-4 text-primary">

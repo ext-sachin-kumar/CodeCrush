@@ -8,9 +8,10 @@ const color = "blue";
 
 const RecommendationList = ({ isSmallScreen }) => {
   return (
-    <ul className={`mt-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6`}>
+    <ul className={`mt-5 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6`}>
       {RECOMMENDATIONS.map((rec, index) => (
           <MotionDiv
+            key={index}
             animate={{ opacity: 1, y: 0 }}
             index={index}
           >

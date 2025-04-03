@@ -189,7 +189,7 @@ const CASE_STUDY_DATA = {
         description: "Revamped frontend using React.js, significantly improving performance and user experience."
       },
       {
-        title: "System Architecture",
+        title: "Performance",
         result: "23%",
         side: "up",
         description: "Redesigned system architecture by implementing microservices, boosting performance by 23%."

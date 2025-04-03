@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import HeyjobsImage from '../../assets/heyjobs.png';
-import { motion } from "framer-motion";
 import NOZLImage from '../../assets/NOZL.jpeg'
 import TrustSignalImage from '../../assets/Trustsignal.jpeg'
 import LucentaSolutionsImage from '../../assets/lucentasolutions.png'

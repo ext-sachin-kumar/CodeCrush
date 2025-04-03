@@ -138,7 +138,7 @@ const Project = ({ isSmallScreen, project }) => {
             }}
             className="p-6 flex flex-col rounded-lg text-center items-center shadow-lg bg-[rgb(var(--color-secondary))] relative"
           >
-            <h3 className="mb-5 text-heading text-2xl">"Looking for a reliable developer to bring your project to life? Let's collaborate and turn your ideas into reality—get in touch today!" 🚀</h3>
+            <h3 className="mb-5 text-heading text-2xl">Looking for a reliable developer to bring your project to life? Let's collaborate and turn your ideas into reality—get in touch today! 🚀</h3>
             <HireMe />
           </div>
         </div>

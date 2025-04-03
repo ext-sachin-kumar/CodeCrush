@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import MotionDiv from '../Motion/MotionDiv'
 import SidebarContent from "../SidebarContent/SidebarContent";
 
 const Sidebar = ({ isSmallScreen }) => {
@@ -42,8 +43,8 @@ const Sidebar = ({ isSmallScreen }) => {
             {isOpen && (
               <>
                 {/* Backdrop */}
-                <motion.div
-                  className="fixed inset-0 bg-opacity-50 flex items-center justify-center"
+                <MotionDiv
+                  classes="fixed inset-0 bg-opacity-50 flex items-center justify-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -51,14 +52,13 @@ const Sidebar = ({ isSmallScreen }) => {
                 />
 
                 {/* Modal Dialog */}
-                <motion.div
+                <MotionDiv
                   ref={dialogRef}
-                  className="fixed w-full h-full bg-[rgb(var(--color-sidebar))] shadow-lg overflow-y-auto z-999"
+                  classes="fixed w-full h-full bg-[rgb(var(--color-sidebar))] shadow-lg overflow-y-auto z-999"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 100, damping: 12 }}
                 >
-                  {/* Close Button */}
                   <div className="flex justify-end">
                     <button onClick={closeModal} className="absolute text-primary top-7.5 right-4 hover:text-muted">
                       <X size={24} />
@@ -69,7 +69,7 @@ const Sidebar = ({ isSmallScreen }) => {
                   <div className="flex flex-col items-center text-center text-white">
                     <SidebarContent closeSideBarModal={closeModal} isSmallScreen={isSmallScreen} isOpen={isOpen} />
                   </div>
-                </motion.div>
+                </MotionDiv>
               </>
             )}
           </AnimatePresence>

@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import { ContactRound, Home } from "lucide-react";
 import { useContext } from 'react';
 import SachinImage from '../../assets/IMG_1931-modified.png';
 import { FaGithub, FaLinkedin, FaStackOverflow, FaPaperPlane, FaPhone, FaFileCode, FaBlog } from "react-icons/fa";
@@ -54,9 +54,9 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
           <NavItem icon={<Home className="w-5 h-5" />} label="About me" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "About me"} />
           <NavItem icon={<FaFileCode className="w-5 h-5"/>} label="Portfolio" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Portfolio"} />
           <NavItem icon={<MdDesignServices className="w-5 h-5"/>} label="Services" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Services"} />
-          {/*<NavItem icon={<FileText className="w-5 h-5"/>} label="Resume" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Resume"} />
-          <NavItem icon={<FaBlog className="w-5 h-5 ml-1"/>} label="Blog" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Blog"} />
-          <NavItem icon={<ContactRound className="w-5 h-5"/>} label="Contact" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Contact"} /> */}
+          <NavItem icon={<FaPaperPlane className="w-5 h-5"/>} label="Resume" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Resume"} />
+          <NavItem icon={<ContactRound className="w-5 h-5"/>} label="Contact" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Contact"} />
+          {/* <NavItem icon={<FaBlog className="w-5 h-5 ml-1"/>} label="Blog" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Blog"} /> */}
         </nav>
 
         <HireMe/>

@@ -5,17 +5,21 @@ import MotionDiv from "../Motion/MotionDiv";
 const skills = [
   { name: "Node.js", level: 95 },
   { name: "JavaScript", level: 95 },
+  { name: "Typescript", level: 90 },
   { name: "ReactJS", level: 85 },
   { name: "Python", level: 80 },
-  { name: "MongoDB", level: 86 },
   { name: "Ruby on Rails", level: 85 },
+  { name: "CI/CD", level: 75 },
+  { name: "AWS", level: 80 },
+  { name: "Docker", level: 85 },
   { name: "PostgreSQL", level: 75 },
+  { name: "MongoDB", level: 86 },
   { name: "HTML & CSS", level: 95 },
 ];
 
 const Home = ({ isSmallScreen }) => {
   return (
-    <div className="flex-1 flex-col h-screen overflow-y-auto" style={{ backgroundColor: "#111821" }}>
+    <div className="flex-1 flex-col h-screen overflow-y-auto bg-[rgb(var(--color-primary))]">
       <div className={`flex-1 ${isSmallScreen ? 'pt-20' : 'pt-8'} p-10`}>
         {/* Introduction Section */}
         <div className="mb-10">
