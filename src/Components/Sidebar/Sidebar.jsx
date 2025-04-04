@@ -36,11 +36,17 @@ const Sidebar = ({ isSmallScreen }) => {
 
 
                 {!isOpen && <h2 className="font-extrabold text-heading text-2xl">
-                  <img
-                  src="/code-crush-logo.png"
-                  alt="CodeCrush Logo"
-                  className="object-contain max-w-[80px]"
-                />
+                  <picture>
+                    <source srcset="/code-crush-logo.webp" type="image/webp" />
+                    <img
+                      alt="CodeCrush Logo"
+                      class="object-contain max-w-[80px]"
+                      src="/code-crush-logo-80.png"
+                      width="80"
+                      height="80"
+                      loading="lazy" />
+                  </picture>
+
                 </h2>}
               </div>
             </nav>
