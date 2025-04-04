@@ -37,10 +37,10 @@ const Resume = memo(({ isSmallScreen }) => {
         <div className="w-full bg-[rgb(var(--color-secondary))] p-8 rounded-lg shadow-lg">
           
           {/* Header */}
-          <div className="mb-5 flex justify-between items-start">
+          <div className="mb-5 lg:flex lg:flex-row md:flex-col justify-between items-start">
             <div>
               <h1 className="text-3xl text-heading font-bold">Sachin Kumar</h1>
-              <p className="mt-2 text-heading">Full Stack Developer</p>
+              <p className="mt-2 text-primary">Full Stack Developer</p>
             </div>
             <div className="flex flex-col">
               <ContactInfo icon={MdEmail} text="sachin@code-crush.dev" />
