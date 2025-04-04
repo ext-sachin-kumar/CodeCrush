@@ -20,7 +20,7 @@ const Sidebar = ({ isSmallScreen }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  
+
   return (
     <>
       {!isSmallScreen ? (
@@ -33,7 +33,15 @@ const Sidebar = ({ isSmallScreen }) => {
                 <button onClick={openModal} className="text-primary">
                   <Menu size={30} />
                 </button>
-                {!isOpen && <h2 className="font-extrabold text-heading text-2xl">Sachin Kumar</h2>}
+
+
+                {!isOpen && <h2 className="font-extrabold text-heading text-2xl">
+                  <img
+                  src="/code-crush-logo.png"
+                  alt="CodeCrush Logo"
+                  className="object-contain max-w-[80px]"
+                />
+                </h2>}
               </div>
             </nav>
           )}
