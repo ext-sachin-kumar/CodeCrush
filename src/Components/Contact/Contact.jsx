@@ -14,6 +14,10 @@ export default function ContactForm({ isSmallScreen }) {
     setLoading(true);
 
     try {
+      setTimeout(() => {
+        setModalOpen(true);
+        setFormData({ name: "", email: "", message: "" });
+      }, 1000)
       const response = await axios.post("https://codecrush-server-t3ki.onrender.com/send-email", {
         to: "sachin@code-crush.dev",
         subject: "New Contact Message",
@@ -21,11 +25,6 @@ export default function ContactForm({ isSmallScreen }) {
                <p><strong>Email:</strong> ${formData.email}</p>
                <p><strong>Message:</strong> ${formData.message}</p>`,
       });
-
-      if (response.data.success) {
-        setModalOpen(true);
-        setFormData({ name: "", email: "", message: "" });
-      }
     } catch (error) {
       console.error("Error sending email:", error);
     }

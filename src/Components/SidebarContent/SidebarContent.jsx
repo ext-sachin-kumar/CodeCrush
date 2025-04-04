@@ -33,7 +33,7 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
           </li>
         </ul>
         <div className="mt-4 px-4 text-center text-sm">
-          <p>Full-Stack Developer with 7+ years of experience in Node.js, JavaScript, Ruby on Rails, React.js, and PostgreSQL.</p>
+          <p>Full-Stack Developer with 7+ years of experience in building scalable web applications and backend systems.</p>
         </div>
         <ul className="mt-6 flex space-x-5 text-blue-400">
           <SocialLink href="https://github.com/ext-sachin-kumar" icon={<FaGithub className="w-5 h-5" />} />

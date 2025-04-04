@@ -9,8 +9,8 @@ const skills = [
   { name: "ReactJS", level: 85 },
   { name: "Python", level: 80 },
   { name: "Ruby on Rails", level: 85 },
-  { name: "CI/CD", level: 75 },
-  { name: "AWS", level: 80 },
+  { name: "CI/CD", level: 80 },
+  { name: "AWS", level: 86 },
   { name: "Docker", level: 85 },
   { name: "PostgreSQL", level: 75 },
   { name: "MongoDB", level: 86 },
@@ -25,10 +25,7 @@ const Home = ({ isSmallScreen }) => {
         <div className="mb-10">
           <h1 className="text-2xl text-heading font-bold border-l-6 pl-4 border-blue-400">Hello, I am</h1>
           <p className="text-md mt-5 text-pretty text-primary">
-            Experienced Full Stack Developer with over 7 years of expertise in designing and optimizing scalable web applications. Proficient in
-            Node.js, Ruby on Rails, React.js, AWS, and PostgreSQL. Passionate about creating high-performance APIs, implementing real-time applications,
-            and delivering robust frontend and backend solutions. Adept at CI/CD pipelines, Docker, AWS, and modern development methodologies.
-            Committed to innovation, efficiency, and quality assurance.
+Experienced Full-Stack Developer with 7+ years of expertise in designing, developing, and optimizing scalable web applications, APIs, and real-time systems. Proficient in cloud computing, microservices, DevOps, and CI/CD pipelines, with hands-on experience in containerization, automation, and infrastructure management. Skilled in building high-performance, secure, and user-centric solutions while leveraging modern development practices, agile methodologies, and best coding standards. Passionate about innovation, performance optimization, and delivering seamless digital experiences.
           </p>
         </div>
 
