@@ -112,10 +112,11 @@ const CASE_STUDY_DATA = {
       }
     ]
   },
-  Trustsignal: {
+  DianApps: {
     image: TrustSignalImage,
-    intro: "TrustSignal.io is a comprehensive Communication Platform as a Service (CPaaS) provider, offering businesses a suite of messaging solutions including SMS, RCS, WhatsApp, Voice, and Email. By delivering reliable and scalable communication tools, TrustSignal enables organizations to effectively connect with their customers across multiple channels.",
-    description: "Established in 2020 and headquartered in Noida, India, TrustSignal has rapidly become a prominent player in the A2P (Application-to-Person) messaging domain. The platform caters to over 150,000 businesses globally, including eight of the ten largest tech companies, providing services such as SMS, OTP notifications, RCS messaging, Voice solutions, Email, and WhatsApp for Business. TrustSignal emphasizes transparency and customization, allowing businesses to tailor communication solutions to their specific needs.",
+    client: "TrustSignal",
+    intro: "DianApps is a global digital product agency delivering high-performance mobile and web apps. With expertise in Flutter, React Native, and full-stack development, they help startups and enterprises bring ideas to life with scalable, user-centric solutions.",
+    description: "TrustSignal.io is a comprehensive Communication Platform as a Service (CPaaS) provider, offering businesses a suite of messaging solutions including SMS, RCS, WhatsApp, Voice, and Email. By delivering reliable and scalable communication tools, TrustSignal enables organizations to effectively connect with their customers across multiple channels.",
     industry: "Communication",
     size: "30+",
     website: 'https://trustsignal.io',

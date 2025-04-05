@@ -40,7 +40,7 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
           <SocialLink href="https://linkedin.com/in/sachinykumar" icon={<FaLinkedin className="w-5 h-5" />} />
           <SocialLink href="https://stackoverflow.com/users/6902208/sachin-yadav" icon={<FaStackOverflow className="w-5 h-5" />} />
         </ul>
-        <nav className="mt-5 w-full">
+        <nav className="mt-5 flex flex-col justify-center">
           <NavItem icon={<Home className="w-4 h-4" />} label="About me" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "About me"} />
           <NavItem icon={<FaFileCode className="w-4 h-4" />} label="Portfolio" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Portfolio"} />
           <NavItem icon={<MdDesignServices className="w-4 h-4" />} label="Services" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Services"} />

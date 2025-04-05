@@ -19,7 +19,7 @@ const Resume = memo(({ isSmallScreen }) => {
   return (
     <div className="flex-1 flex-col h-screen overflow-y-auto bg-[rgb(var(--color-primary))]">
       <div className={`flex-1 ${isSmallScreen ? 'pt-20' : 'pt-10'} p-10`}>
-        
+
         {/* Download Button */}
         <div className="flex justify-center items-center mb-10">
           <button
@@ -29,13 +29,13 @@ const Resume = memo(({ isSmallScreen }) => {
             aria-label="Download Resume"
           >
             Download Resume
-            <FaDownload className="text-lg text-primary w-4 h-4"/>
+            <FaDownload className="text-lg text-primary w-4 h-4" />
           </button>
         </div>
 
         {/* Resume Content */}
         <div className="w-full bg-[rgb(var(--color-secondary))] p-8 rounded-lg shadow-lg">
-          
+
           {/* Header */}
           <div className="mb-5 lg:flex lg:flex-row md:flex-col justify-between items-start">
             <div>
@@ -51,7 +51,7 @@ const Resume = memo(({ isSmallScreen }) => {
 
           {/* Summary */}
           <SectionTitle title="Summary" />
-          <p className="text-primary text-sm leading-relaxed">
+          <p className="mb-5 text-primary text-sm leading-relaxed">
             Experienced Full Stack Developer with over 7 years of expertise in designing and
             optimizing scalable web applications. Skilled in developing high-performance APIs,
             building dynamic user interfaces, and implementing real-time functionalities.
@@ -70,6 +70,7 @@ const Resume = memo(({ isSmallScreen }) => {
 
           {/* Experience Section */}
           <SectionTitle title="Experience" />
+
           <div className="relative border-l-2 border-gray-500 pl-6">
             {EXPERIENCE.map((exp, index) => (
               <ExperienceItem key={index} exp={exp} />
@@ -80,7 +81,7 @@ const Resume = memo(({ isSmallScreen }) => {
 
           {/* Key Achievements */}
           <SectionTitle title="Key Achievements" />
-          <ul className="list-disc list-inside text-primary text-sm space-y-2">
+          <ul className="mb-5 list-disc list-inside text-primary text-sm space-y-2">
             <AchievementItem
               title="Pipeline Optimization Success:"
               description="Optimized job processing speed by 30%, handling over 100K job listings monthly."
@@ -103,7 +104,7 @@ const Resume = memo(({ isSmallScreen }) => {
 
           {/* Education Section */}
           <SectionTitle title="Education" />
-          <p className="mt-2 text-sm text-primary">Bachelor of Technology in Computer Science | 2013 - 2017</p>
+          <p className="text-sm text-primary">Bachelor of Technology in Computer Science | 2014 - 2018</p>
         </div>
       </div>
       {window.innerWidth <= 600 ? <div className="h-10"></div> : null}
@@ -128,7 +129,7 @@ const Divider = () => <div className="border-b border-gray-800 mb-5"></div>;
 
 const ExperienceItem = ({ exp }) => (
   <div className="relative mb-8 text-sm">
-    <span className="absolute -left-8 top-1 w-3 h-3 bg-gray-400 rounded-full"></span>
+    <span className="absolute -left-[1.95rem] top-1 w-3 h-3 bg-gray-400 rounded-full"></span>
     <p className="text-primary">{exp.duration}</p>
     <h4 className="font-bold text-primary">{exp.role}</h4>
     <h5 className="font-semibold text-muted">{exp.company}</h5>

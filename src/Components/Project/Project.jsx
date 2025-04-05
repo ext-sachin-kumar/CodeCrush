@@ -7,7 +7,7 @@ import HireMe from '../Buttons/HireMe.jsx';
 
 const Project = ({ isSmallScreen, project }) => {
 
-  const { intro, description, industry, image, website, challenges, size, requirements, overview, solutions, results, testimonial } = CASE_STUDY_DATA[project.trim()];
+  const { client = '', intro, description, industry, image, website, challenges, size, requirements, overview, solutions, results, testimonial } = CASE_STUDY_DATA[project.trim()];
   const randomNumber = Math.floor(Math.random() * (testimonial.length))
   const filteredTestimonial = testimonial[randomNumber]
   console.log(filteredTestimonial)
@@ -35,7 +35,7 @@ const Project = ({ isSmallScreen, project }) => {
 
             {/* Content Container */}
             <div className="w-full md:w-2/3 md:pl-6 mt-4 md:mt-0">
-              <h2 className="text-xl font-semibold">{project}</h2>
+              {client ? <h2 className="text-xl font-semibold">Client: {client}</h2> : <h2 className="text-xl font-semibold">{project}</h2>}
               <div className="mt-5 space-y-1">
                 <p className="flex items-center text-md text-primary">
                   <FaIndustry className="mr-2" />
@@ -138,7 +138,7 @@ const Project = ({ isSmallScreen, project }) => {
             }}
             className="p-6 flex flex-col rounded-lg text-center items-center shadow-lg bg-[rgb(var(--color-secondary))] relative"
           >
-            <h3 className="mb-5 text-heading text-2xl">Looking for a reliable developer to bring your project to life? Let's collaborate and turn your ideas into reality—get in touch today! 🚀</h3>
+            <h3 className="mb-5 text-heading text-xl">Looking for a reliable developer to bring your project to life? Let's collaborate and turn your ideas into reality—get in touch today! 🚀</h3>
             <HireMe />
           </div>
         </div>
