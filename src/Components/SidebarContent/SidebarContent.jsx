@@ -1,4 +1,4 @@
-import { ContactRound, Home } from "lucide-react";
+import { ContactRound, Home, Users } from "lucide-react";
 import { useContext } from 'react';
 import SachinImage from '../../assets/IMG_1931-modified.png';
 import { FaGithub, FaLinkedin, FaStackOverflow, FaPaperPlane, FaPhone, FaFileCode, FaBlog } from "react-icons/fa";
@@ -46,6 +46,7 @@ const SidebarContent = ({ isSmallScreen, closeSideBarModal }) => {
           <NavItem icon={<MdDesignServices className="w-4 h-4" />} label="Services" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Services"} />
           <NavItem icon={<FaPaperPlane className="w-4 h-4" />} label="Resume" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Resume"} />
           <NavItem icon={<ContactRound className="w-4 h-4" />} label="Contact" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Contact"} />
+          <NavItem icon={<Users className="w-4 h-4" />} label="Our Team" onClickRoutes={onClickRoutes} closeSideBarModal={closeSideBarModal} isActive={activeLink === "Our Team"} />
           <NavItem
             icon={<FaBlog className="w-4 h-4" />}
             label="Blog"

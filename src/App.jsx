@@ -8,6 +8,7 @@ import Project from './Components/Project/Project';
 import Services from './Components/Services/Services';
 import ResumeViewer from './Components/Resume/Resume';
 import ContactForm from './Components/Contact/Contact';
+import TeamProfile from './Components/TeamProfile/TeamProfile';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const quotes = [
@@ -120,6 +121,8 @@ function Content({ isSmallScreen }) {
         return <ResumeViewer isSmallScreen={isSmallScreen} />;
       case 'Contact':
         return <ContactForm isSmallScreen={isSmallScreen} />;
+      case 'Our Team':
+        return <TeamProfile isSmallScreen={isSmallScreen} />;
       default:
         if (activeLink.includes('Case study')) {
           return <Project isSmallScreen={isSmallScreen} project={project} />;
