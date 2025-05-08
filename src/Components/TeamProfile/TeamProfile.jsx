@@ -11,7 +11,7 @@ const teamMembers = [
 
     ],
 		image: "/public/chintu.jpg",
-    link: "/profile/chintu"
+    link: "About me"
   },
   { 
     name: "Chintu Yadav",
@@ -19,7 +19,7 @@ const teamMembers = [
 
     ],
 		image: "/public/chintu.jpg",
-    link: "/profile/chintu"
+    link: "chintu"
   },
   { 
     name: "Vikki Don",
@@ -27,7 +27,7 @@ const teamMembers = [
 
     ],
 		image: "/public/chintu.jpg",
-    link: "/profile/chintu"
+    link: "Vikki"
   }
 ];
 
@@ -58,7 +58,7 @@ const TeamProfile = ({ isSmallScreen }) => {
 						<div
 							key={index}
 							className="flex-1 min-w-[200px] bg-gray-700 hover:bg-gray-800 text-white rounded-lg p-4 transition-colors duration-300"
-              onClick={() => onClickRoutes('Contact')}
+              onClick={() => onClickRoutes(member.link)}
 						>
 							<div className="flex items-start gap-4">
 								<img

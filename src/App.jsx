@@ -9,6 +9,8 @@ import Services from './Components/Services/Services';
 import ResumeViewer from './Components/Resume/Resume';
 import ContactForm from './Components/Contact/Contact';
 import TeamProfile from './Components/TeamProfile/TeamProfile';
+import Chintu from './Components/Chintu/Chintu';
+import Vikki from './Components/Vikki/Vikki';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const quotes = [
@@ -126,6 +128,10 @@ function Content({ isSmallScreen }) {
       default:
         if (activeLink.includes('Case study')) {
           return <Project isSmallScreen={isSmallScreen} project={project} />;
+        } else if (activeLink.includes('Chintu')) {
+          return <Chintu isSmallScreen={isSmallScreen} project={project} />;
+        } else if (activeLink.includes('Vikki')) {
+          return <Vikki isSmallScreen={isSmallScreen} project={project} />;
         }
         return null;
     }
